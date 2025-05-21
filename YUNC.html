@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prank Button</title>
+    <script>
+        function prankAction() {
+            // Show the text on the webpage
+            document.getElementById("prankText").innerText = "YEAH BOIIIIIIIIIIIIIIIIIIIIIIIIII";
+
+            // List of prank YouTube videos
+            const videos = [
+                "https://youtu.be/2_Ur5IjW_c8?list=TLPQMjEwNTIwMjWK58sdl28pJQ",
+                "https://youtu.be/0yp6A7cpyao?list=TLPQMjEwNTIwMjWK58sdl28pJQ",
+                "https://youtu.be/PM9O7rk69Cw?list=TLPQMjEwNTIwMjWK58sdl28pJQ",
+                "https://youtu.be/HuHz24j816A?list=TLPQMjEwNTIwMjWK58sdl28pJQ"
+            ];
+
+            // Randomly select a video
+            const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+
+            // Open the selected video in a new tab
+            window.open(randomVideo, "_blank");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="prankAction()">
+        <img src="https://cdn-icons-png.flaticon.com/512/5200/5200000.png" alt="Prank Button" width="100">
+    </button>
+    <p id="prankText"></p>
+</body>
+</html>
